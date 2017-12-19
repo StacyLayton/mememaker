@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,25 +15,29 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WIc-7O-YyI">
-                                <rect key="frame" x="35" y="27.5" width="250" height="425"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WIc-7O-YyI">
+                                <rect key="frame" x="259" y="240.5" width="250" height="543"/>
                                 <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vc7-4u-Ct5">
-                                        <rect key="frame" x="64.5" y="0.0" width="121" height="29"/>
+                                    <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vc7-4u-Ct5">
+                                        <rect key="frame" x="57.5" y="0.0" width="135" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="135" id="4Xg-LW-7qI"/>
+                                            <constraint firstAttribute="height" constant="35" id="hUa-0l-Qmq"/>
+                                        </constraints>
                                         <segments>
-                                            <segment title="First"/>
+                                            <segment title="Photos"/>
                                             <segment title="Second"/>
                                         </segments>
                                         <color key="tintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <action selector="choiceSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="7QP-rK-Twl"/>
+                                            <action selector="photoSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="QAQ-pj-RXT"/>
                                         </connections>
                                     </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xtK-fo-1Oa">
-                                        <rect key="frame" x="64.5" y="38" width="121" height="28"/>
+                                        <rect key="frame" x="64.5" y="50" width="121" height="28"/>
                                         <subviews>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WgM-dt-oAk">
                                                 <rect key="frame" x="0.0" y="0.0" width="121" height="29"/>
@@ -42,13 +46,23 @@
                                                     <segment title="Second"/>
                                                 </segments>
                                                 <connections>
-                                                    <action selector="choiceSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="dQj-Kh-EhV"/>
+                                                    <action selector="topChoiceSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="Qb8-QV-40e"/>
                                                 </connections>
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ARB-5i-N2h">
+                                        <rect key="frame" x="64.5" y="93" width="121" height="29"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="topChoiceSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="5CH-uc-N7T"/>
+                                        </connections>
+                                    </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2MX-Rr-y2I">
-                                        <rect key="frame" x="104" y="76" width="42" height="20.5"/>
+                                        <rect key="frame" x="104" y="136" width="42" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YId-E1-eWe">
                                                 <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
@@ -59,26 +73,36 @@
                                         </subviews>
                                     </stackView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="babyface1" translatesAutoresizingMaskIntoConstraints="NO" id="uNw-J0-GZ3">
-                                        <rect key="frame" x="0.0" y="106.5" width="250" height="250"/>
+                                        <rect key="frame" x="0.0" y="171.5" width="250" height="250"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="7jr-zk-tvb"/>
                                             <constraint firstAttribute="width" constant="250" id="x0w-o9-21H"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoA-m5-bnf">
-                                        <rect key="frame" x="104" y="366.5" width="42" height="20.5"/>
+                                        <rect key="frame" x="104" y="436.5" width="42" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="h3k-Jw-hfM">
-                                        <rect key="frame" x="64.5" y="397" width="121" height="29"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cY9-LQ-t6E">
+                                        <rect key="frame" x="64.5" y="472" width="121" height="29"/>
                                         <segments>
                                             <segment title="First"/>
                                             <segment title="Second"/>
                                         </segments>
                                         <connections>
-                                            <action selector="choiceSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="ER8-1L-C4l"/>
+                                            <action selector="bottomChoiceSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ta5-PI-vN3"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="h3k-Jw-hfM">
+                                        <rect key="frame" x="64.5" y="515" width="121" height="29"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="bottomChoiceSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="KLg-3y-uSk"/>
                                         </connections>
                                     </segmentedControl>
                                 </subviews>
@@ -92,10 +116,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="Bottom2ndCaptionSegControl" destination="cY9-LQ-t6E" id="pqc-Ga-tvO"/>
                         <outlet property="BottomCaptionLabel" destination="UoA-m5-bnf" id="Sd5-gx-xyN"/>
                         <outlet property="BottomCaptionSegControl" destination="h3k-Jw-hfM" id="voA-bR-9iv"/>
                         <outlet property="MemeImage" destination="uNw-J0-GZ3" id="ims-lw-Cn7"/>
                         <outlet property="PhotoSelectorControl" destination="Vc7-4u-Ct5" id="FBT-CO-Kuc"/>
+                        <outlet property="Top2ndCaptionSegControl" destination="ARB-5i-N2h" id="NxI-qS-86k"/>
                         <outlet property="TopCaptionLabel" destination="YId-E1-eWe" id="jLl-WH-O6b"/>
                         <outlet property="TopCaptionSegControl" destination="WgM-dt-oAk" id="0Za-Ja-1ds"/>
                     </connections>
