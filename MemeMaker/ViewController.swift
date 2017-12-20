@@ -47,33 +47,34 @@ class ViewController: UIViewController {
         ///Buttons to select the words that appear over and under the image
         let blankOption = CaptionChoice(emoji: "۫", caption: " ")
         
-        ///OVER
-        let likeMeChoice = CaptionChoice(emoji: "😎", caption: "YOU DON'T LIKE ME?")
-        let madChoice = CaptionChoice(emoji: "😡", caption: "U MAD BRO?")
-        let omgChoice = CaptionChoice(emoji: "😲", caption: "ERMAHGERD")
-        let failChoice = CaptionChoice(emoji: "👎", caption: "FAIL")
-        let lolChoice = CaptionChoice(emoji: "🤪", caption: "LOL")
-        let ninjaChoice = CaptionChoice(emoji: "🤺", caption: "LIKE A NINJA")
-        let moodChoice = CaptionChoice(emoji: "🌝", caption: "MY MOOD EVERYDAY")
-        let goodDealChoice = CaptionChoice(emoji: "💰", caption: "I KNOW A GOOD DEAL WHEN I SEE IT")
-        let fatChoice = CaptionChoice(emoji: "🐷", caption: "HOW I FEEL AFTER AN 'ALL YOU CAN EAT' BUFFET")
-        let introChoice = CaptionChoice(emoji: "🙇‍♀️", caption: "HOW MY FRIENDS INTRODUCE ME")
-        let awkwardChoice = CaptionChoice(emoji: "😳", caption: "THAT AWKWARD MOMENT WHEN YOU REALIZE")
+        ///TOP
+        let likeMeChoice = CaptionChoice(emoji: "😎", caption: "YOU DON'T LIKE ME?") //1
+        let madChoice = CaptionChoice(emoji: "😡", caption: "U MAD BRO?") //2
+        let omgChoice = CaptionChoice(emoji: "😲", caption: "ERMAHGERD") //3
+        let failChoice = CaptionChoice(emoji: "👎", caption: "FAIL") //4
+        let lolChoice = CaptionChoice(emoji: "😜", caption: "LOL") //5
+        let ninjaChoice = CaptionChoice(emoji: "🤺", caption: "LIKE A NINJA") //6
+        let moodChoice = CaptionChoice(emoji: "🌝", caption: "MY MOOD EVERYDAY") //7
+        let goodDealChoice = CaptionChoice(emoji: "💰", caption: "I KNOW A GOOD DEAL WHEN I SEE IT") //8
+        let fatChoice = CaptionChoice(emoji: "🐷", caption: "HOW I FEEL AFTER AN 'ALL YOU CAN EAT' BUFFET") //9
+        let introChoice = CaptionChoice(emoji: "🙇‍♀️", caption: "HOW MY FRIENDS INTRODUCE ME") //10
+        let awkwardChoice = CaptionChoice(emoji: "😳", caption: "THAT AWKWARD MOMENT WHEN YOU REALIZE") //11
         
-        let gotThisChoice = CaptionChoice(emoji: "✅", caption: "I GOT THIS")
-        let basicallyChoice = CaptionChoice(emoji: "𝔅", caption: "SO, BASICALLY")
-        let crapChoice = CaptionChoice(emoji: "💩", caption: "THE CRAP IS THIS?")
-        let troubleChoice = CaptionChoice(emoji: "🆘", caption: "YOU KNOW YOU'RE IN TROUBLE WHEN")
-        let watchChoice = CaptionChoice(emoji: "👀", caption: "WAIT, WATCH THIS")
-        let firstChoice = CaptionChoice(emoji: "𝟏", caption: "AT FIRST I WAS LIKE")
-        let noteChoice = CaptionChoice(emoji: "📝", caption: "NOTE TO SELF")
-        let meanwhileChoice = CaptionChoice(emoji: "☄️", caption: "MEANWHILE")
-        let funChoice = CaptionChoice(emoji: "🍄", caption: "I HAD FUN ONCE")
-        let notSimplyChoice = CaptionChoice(emoji: "🚫", caption: "ONE DOES NOT SIMPLY")
-        let dontAlwaysChoice = CaptionChoice(emoji: "🔝", caption: "I DON'T ALWAYS")
+        let gotThisChoice = CaptionChoice(emoji: "✅", caption: "I GOT THIS") //12
+        let basicallyChoice = CaptionChoice(emoji: "𝔅", caption: "SO, BASICALLY") //13
+        let smileChoice = CaptionChoice(emoji: "😃", caption: "KEEP CALM") //14
+        let troubleChoice = CaptionChoice(emoji: "🆘", caption: "YOU KNOW UR IN TROUBLE WHEN") //15
+        let watchChoice = CaptionChoice(emoji: "👀", caption: "WAIT, WATCH THIS") //16
+        let toldChoice = CaptionChoice(emoji: "🦄", caption: "WHAT IF I TOLD YOU") //17
+        let noteChoice = CaptionChoice(emoji: "📝", caption: "NOTE TO SELF") //18
+        let meanwhileChoice = CaptionChoice(emoji: "☄️", caption: "MEANWHILE") //19
+        let funChoice = CaptionChoice(emoji: "🍄", caption: "I HAD FUN ONCE") //20
+        let notSimplyChoice = CaptionChoice(emoji: "🚫", caption: "ONE DOES NOT SIMPLY") //21
+        //let dontAlwaysChoice = CaptionChoice(emoji: "🔝", caption: "I DON'T ALWAYS")
+        let oneMoreChoice = CaptionChoice(emoji: "🕐", caption: "ONE MORE TIME") //22
         
         topChoices = [blankOption, likeMeChoice, madChoice, omgChoice, failChoice, lolChoice, ninjaChoice, moodChoice, goodDealChoice, fatChoice, introChoice, awkwardChoice]
-        top2ndChoices = [blankOption, gotThisChoice, basicallyChoice, crapChoice, troubleChoice, watchChoice, firstChoice, noteChoice, meanwhileChoice, funChoice, notSimplyChoice, dontAlwaysChoice]
+        top2ndChoices = [blankOption, gotThisChoice, basicallyChoice, smileChoice, troubleChoice, watchChoice, toldChoice, noteChoice, meanwhileChoice, funChoice, notSimplyChoice, oneMoreChoice]
         TopCaptionSegControl.removeAllSegments()
         Top2ndCaptionSegControl.removeAllSegments()
         for choice in topChoices {
@@ -85,26 +86,35 @@ class ViewController: UIViewController {
         TopCaptionSegControl.selectedSegmentIndex = 0
         Top2ndCaptionSegControl.selectedSegmentIndex = 0
         
-        ///UNDER
-        let catChoice = CaptionChoice(emoji: "😸", caption: "NO. JUST NO.")
-        let wiseChoice = CaptionChoice(emoji: "🐼", caption: "CHOOSE WISELY")
-        let epicChoice = CaptionChoice(emoji: "👑", caption: "EPIC")
-        let kermitChoice = CaptionChoice(emoji: "🐸", caption: "BUT THAT'S NONE OF MY BUSINESS")
-        let foxChoice = CaptionChoice(emoji: "🦊", caption: "WHAT DOES THE FOX SAY?")
-        let cowChoice = CaptionChoice(emoji: "🐮", caption: "I GOTTA HAVE MORE COWBELL!")
-        let baseChoice = CaptionChoice(emoji: "🎮", caption: "ALL YOUR BASE ARE BELONG TO US")
-        let terroristChoice = CaptionChoice(emoji: "💣", caption: "I KILL YOU")
-        let batChoice = CaptionChoice(emoji: "🦇", caption: "UNLESS YOU'RE BATMAN")
-        let secondChoice = CaptionChoice(emoji: "𝟐", caption: "BUT THEN I WAS LIKE")
-        let wrongChoice = CaptionChoice(emoji: "🤢", caption: "I WAS WRONG!")
-        let successChoice = CaptionChoice(emoji: "✊🏽", caption: "SUCCESS")
+        ///BOTTOM
+        let catChoice = CaptionChoice(emoji: "😸", caption: "NO. JUST NO.") //12
+        let wiseChoice = CaptionChoice(emoji: "🐼", caption: "CHOOSE WISELY") //13
+        let epicChoice = CaptionChoice(emoji: "👑", caption: "EPIC") //14
+        let kermitChoice = CaptionChoice(emoji: "🐸", caption: "BUT THAT'S NONE OF MY BUSINESS") //15
+        let foxChoice = CaptionChoice(emoji: "🦊", caption: "WHAT DOES THE FOX SAY?") //16
+        let cowChoice = CaptionChoice(emoji: "🐮", caption: "I GOTTA HAVE MORE COWBELL!") //17
+        let baseChoice = CaptionChoice(emoji: "🎮", caption: "ALL YOUR BASE ARE BELONG TO US") //18
+        let terroristChoice = CaptionChoice(emoji: "💣", caption: "I KILL YOU") //19
+        //let batChoice = CaptionChoice(emoji: "🦇", caption: "UNLESS YOU'RE BATMAN")
+        let classChoice = CaptionChoice(emoji: "🤪", caption: "SUCH CLASS") //20
+        //let secondChoice = CaptionChoice(emoji: "𝟐", caption: "BUT THEN I WAS LIKE")
+        let thugChoice = CaptionChoice(emoji: "👨‍🎤", caption: "THUG LIFE") //21
+        let wrongChoice = CaptionChoice(emoji: "🤢", caption: "I WAS WRONG!") //22
         
-        let urWorthChoice = CaptionChoice(emoji: "💍", caption: "BECAUSE U R WORTH IT")
-        let faithChoice = CaptionChoice(emoji: "✞", caption: "FAITH IN HUMANITY RESTORED")
-        let chillChoice = CaptionChoice(emoji: "❄️", caption: "CHILL")
+        let successChoice = CaptionChoice(emoji: "✊🏽", caption: "SUCCESS") //1
+        let urWorthChoice = CaptionChoice(emoji: "💍", caption: "BECAUSE U R WORTH IT") //2
+        let faithChoice = CaptionChoice(emoji: "✞", caption: "FAITH IN HUMANITY RESTORED") //3
+        let terribleChoice = CaptionChoice(emoji: "🙅🏻‍♂️", caption: "VERY MUCH TERRIBLE") //4
+        let chillChoice = CaptionChoice(emoji: "❄️", caption: "CHILL") //5
+        let derpChoice = CaptionChoice(emoji: "🤪", caption: "DERP") //6
+        let legitChoice = CaptionChoice(emoji: "👁‍🗨", caption: "SEEMS LEGIT") //7
+        let problemChoice = CaptionChoice(emoji: "👮‍♀️", caption: "PROBLEM?") //8
+        let acceptChoice = CaptionChoice(emoji: "🆗", caption: "ACCEPT IT") //9
+        let wowChoice = CaptionChoice(emoji: "✨", caption: "SO MUCH WOW") //10
+        let trumpChoice = CaptionChoice(emoji: "🦇", caption: "WRONG") //11
   
-        bottomChoices = [blankOption, catChoice, dogChoice, monkeyChoice, kermitChoice, foxChoice, cowChoice, baseChoice, terroristChoice, batChoice, secondChoice, wrongChoice, successChoice]
-        bottom2ndChoices = [blankOption, urWorthChoice, faithChoice, chillChoice]
+        bottomChoices = [blankOption, catChoice, wiseChoice, epicChoice, kermitChoice, foxChoice, cowChoice, baseChoice, terroristChoice, classChoice, thugChoice, wrongChoice]
+        bottom2ndChoices = [blankOption, successChoice, urWorthChoice, faithChoice, terribleChoice, chillChoice, derpChoice, legitChoice, problemChoice, acceptChoice, wowChoice, trumpChoice]
         BottomCaptionSegControl.removeAllSegments()
         Bottom2ndCaptionSegControl.removeAllSegments()
         for choice in bottomChoices {
