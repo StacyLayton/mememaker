@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var PhotoSelectorControl: UISegmentedControl!
     @IBOutlet weak var MemeImage: UIImageView!
@@ -18,12 +18,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var Top3rdCaptionSegControl: UISegmentedControl!
     @IBOutlet weak var TopCaptionLabel: UILabel!
     
-    @IBOutlet weak var CustomCaption: UITextField!
-    
     @IBOutlet weak var BottomCaptionLabel: UILabel!
     @IBOutlet weak var Bottom3rdCaptionSegControl: UISegmentedControl!
     @IBOutlet weak var Bottom2ndCaptionSegControl: UISegmentedControl!
     @IBOutlet weak var BottomCaptionSegControl: UISegmentedControl!
+    
+    @IBOutlet weak var CustomCaption: UITextField!
     
     var selectPhotoChoices = [ImageSelector]()
     var topChoices = [CaptionChoice]()
@@ -210,6 +210,20 @@ class ViewController: UIViewController {
         TopCaptionLabel.text = topChoice.caption
     }
     
+    func addToTopLabel() {
+        //OVERWRITE TOP MESSAGE
+        //var topIndex: Int
+        //var topChoice: CaptionChoice
+        
+        //Reset these values first
+        TopCaptionSegControl.selectedSegmentIndex = 0
+        Top2ndCaptionSegControl.selectedSegmentIndex = 0
+        Top3rdCaptionSegControl.selectedSegmentIndex = 0
+        
+        TopCaptionLabel.text = CustomCaption.text
+        CustomCaption.text = " "
+    }
+    
     func updateBottomLabel() {
         ///UPDATE BOTTOM MESSAGE
         var bottomIndex: Int
@@ -245,6 +259,10 @@ class ViewController: UIViewController {
     
     @IBAction func bottomChoiceSelected(_ sender: Any) {
         updateBottomLabel()
+    }
+    
+    @IBAction func PasteCustomText(_ sender: Any) {
+        addToTopLabel()
     }
 }
 
