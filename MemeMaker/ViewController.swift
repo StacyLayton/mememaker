@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var Top3rdCaptionSegControl: UISegmentedControl!
     @IBOutlet weak var TopCaptionLabel: UILabel!
     
+    @IBOutlet weak var CustomCaption: UITextField!
+    
     @IBOutlet weak var BottomCaptionLabel: UILabel!
     @IBOutlet weak var Bottom3rdCaptionSegControl: UISegmentedControl!
     @IBOutlet weak var Bottom2ndCaptionSegControl: UISegmentedControl!

@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Verdana.ttf">
+            <string>Verdana</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -19,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WIc-7O-YyI">
-                                <rect key="frame" x="62.5" y="19" width="250" height="629"/>
+                                <rect key="frame" x="62.5" y="-5" width="250" height="677"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vc7-4u-Ct5">
                                         <rect key="frame" x="57.5" y="0.0" width="135" height="36"/>
@@ -72,31 +77,39 @@
                                         </connections>
                                     </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2MX-Rr-y2I">
-                                        <rect key="frame" x="104" y="179" width="42" height="20.5"/>
+                                        <rect key="frame" x="71.5" y="179" width="107" height="22"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YId-E1-eWe">
-                                                <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Caption" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YId-E1-eWe">
+                                                <rect key="frame" x="0.0" y="0.0" width="107" height="22"/>
+                                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="CUSTOM CAPTION" borderStyle="roundedRect" textAlignment="center" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vlI-K4-aDA">
+                                        <rect key="frame" x="31" y="216" width="188" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="babyface1" translatesAutoresizingMaskIntoConstraints="NO" id="uNw-J0-GZ3">
-                                        <rect key="frame" x="0.0" y="214.5" width="250" height="250"/>
+                                        <rect key="frame" x="0.0" y="261" width="250" height="250"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="7jr-zk-tvb"/>
                                             <constraint firstAttribute="width" constant="250" id="x0w-o9-21H"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoA-m5-bnf">
-                                        <rect key="frame" x="104" y="479.5" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom Caption" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoA-m5-bnf">
+                                        <rect key="frame" x="54.5" y="526" width="141.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="x19-jM-hyL">
-                                        <rect key="frame" x="64.5" y="514" width="121" height="29"/>
+                                        <rect key="frame" x="64.5" y="563" width="121" height="29"/>
                                         <segments>
                                             <segment title="First"/>
                                             <segment title="Second"/>
@@ -106,7 +119,7 @@
                                         </connections>
                                     </segmentedControl>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cY9-LQ-t6E">
-                                        <rect key="frame" x="64.5" y="558" width="121" height="29"/>
+                                        <rect key="frame" x="64.5" y="606" width="121" height="29"/>
                                         <segments>
                                             <segment title="First"/>
                                             <segment title="Second"/>
@@ -116,7 +129,7 @@
                                         </connections>
                                     </segmentedControl>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="h3k-Jw-hfM">
-                                        <rect key="frame" x="64.5" y="601" width="121" height="29"/>
+                                        <rect key="frame" x="64.5" y="649" width="121" height="29"/>
                                         <segments>
                                             <segment title="First"/>
                                             <segment title="Second"/>
@@ -140,6 +153,7 @@
                         <outlet property="Bottom3rdCaptionSegControl" destination="x19-jM-hyL" id="YIv-3o-agm"/>
                         <outlet property="BottomCaptionLabel" destination="UoA-m5-bnf" id="Sd5-gx-xyN"/>
                         <outlet property="BottomCaptionSegControl" destination="h3k-Jw-hfM" id="voA-bR-9iv"/>
+                        <outlet property="CustomCaption" destination="vlI-K4-aDA" id="gYG-ge-FYC"/>
                         <outlet property="MemeImage" destination="uNw-J0-GZ3" id="ims-lw-Cn7"/>
                         <outlet property="PhotoSelectorControl" destination="Vc7-4u-Ct5" id="FBT-CO-Kuc"/>
                         <outlet property="Top2ndCaptionSegControl" destination="ARB-5i-N2h" id="NxI-qS-86k"/>
