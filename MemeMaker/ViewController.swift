@@ -175,18 +175,43 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    ///UPDATE IMAGE
     func updateImage() {
-        ///UPDATE IMAGE
+        var picIndex: Int
+        var picChoice: String
+        
         let presetPhotos = ["babyface1", "craftykid1", "craftykid2", "craftykid3", "craftykid4", "craftykid5", "crying1", "crying2", "faces1", "faces2", "faces3", "faces4", "faces5", "faces6", "faces7", "funnycat1", "funnycat2", "funnycat3", "funnymonkey1", "kids1", "kids2", "kids3", "kids4", "kids5", "kids6", "kids7", "kids8", "kids9", "kids10", "kids11", "kids12", "kids13", "kids14","kids15", "kids16", "kids18", "kids19", "kids20", "kids21", "kids22", "kids23", "kids24", "kids25", "kids26", "kids27", "kids28", "kids29", "kids30", "kids31", "kids32", "kids33.png"]
         
-        let randomNewPhoto = presetPhotos[Int(arc4random_uniform(UInt32(presetPhotos.count)))]
-        MemeImage.image = UIImage(named: randomNewPhoto)
+        let familyPhotos = ["Cool Cat", "Just Cute", "PapoFace.png", "Maggie", "Not Happy.png", "Scary Santa.png", "Smarty.png", "So Excited.png", "So.png", "The man.png", "Too Much.png", "Watching you.png", "Who me.png", "Yes You.png"]
+        
+        picIndex = PhotoSelectorControl.selectedSegmentIndex
+        
+        if (picIndex == 0) {
+            picChoice = familyPhotos[Int(arc4random_uniform(UInt32(familyPhotos.count)))]
+        }
+        else if (picIndex == 2) {
+            picChoice = presetPhotos[Int(arc4random_uniform(UInt32(presetPhotos.count)))]
+        }
+        else {
+            return
+        }
+        MemeImage.image = UIImage(named: picChoice)
         //Reset the selector without updating the image
         PhotoSelectorControl.selectedSegmentIndex = 1
     }
     
+    ///UPDATE IMAGE (Family)
+    /*func updateImageFamily() {
+        let familyPhotos = ["Cool Cat", "Just Cute", "Maggie and Papo.png", "Maggie.png", "Not Happy.png", "Popo.png", "Scary Santa.png", "Smarty.png", "Smirk.png", "So Excited.png", "So.png"]
+        
+        let randomFamilyPhoto = familyPhotos[Int(arc4random_uniform(UInt32(familyPhotos.count)))]
+        MemeImage.image = UIImage(named: randomFamilyPhoto)
+        //Reset the selector without updating the image
+        PhotoSelectorControl.selectedSegmentIndex = 1
+    }*/
+    
+    ///UPDATE TOP MESSAGE
     func updateTopLabel() {
-        //UPDATE TOP MESSAGE
         var topIndex: Int
         var topChoice: CaptionChoice
         //Only one choice from the top segments
@@ -210,11 +235,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         TopCaptionLabel.text = topChoice.caption
     }
     
+    ///OVERWRITE TOP MESSAGE
     func addToTopLabel() {
-        //OVERWRITE TOP MESSAGE
-        //var topIndex: Int
-        //var topChoice: CaptionChoice
-        
         //Reset these values first
         TopCaptionSegControl.selectedSegmentIndex = 0
         Top2ndCaptionSegControl.selectedSegmentIndex = 0
@@ -224,8 +246,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         CustomCaption.text = " "
     }
     
+    ///UPDATE BOTTOM MESSAGE
     func updateBottomLabel() {
-        ///UPDATE BOTTOM MESSAGE
         var bottomIndex: Int
         var bottomChoice: CaptionChoice
         //Only one choice from the bottom segments
@@ -249,6 +271,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         BottomCaptionLabel.text = bottomChoice.caption
     }
     
+    ///OVERWRITE BOTTOM MESSAGE
+    func addToBottomLabel() {
+        //Reset these values first
+        BottomCaptionSegControl.selectedSegmentIndex = 0
+        Bottom2ndCaptionSegControl.selectedSegmentIndex = 0
+        Bottom3rdCaptionSegControl.selectedSegmentIndex = 0
+        
+        BottomCaptionLabel.text = CustomCaption.text
+        CustomCaption.text = " "
+    }
+    
     @IBAction func photoSelected(_ sender: Any) {
         updateImage()
     }
@@ -263,6 +296,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func PasteCustomText(_ sender: Any) {
         addToTopLabel()
+    }
+    
+    @IBAction func PasteBottomText(_ sender: Any) {
+        addToBottomLabel()
     }
 }
 
